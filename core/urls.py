@@ -8,5 +8,6 @@ from core import views
 # from .views import say_hello
 
 urlpatterns = [
-    path("", views.home, name="home"),
+    path("", views.pdf_view, name="home"),
+    path("home/", views.home, name="home"),
 ]
