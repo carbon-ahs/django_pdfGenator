@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 from django.shortcuts import render
 
 # from django.http import HTTP404
@@ -7,11 +7,13 @@ from . import renderer
 
 
 def pdf_view(request, *args, **kwargs):
+    test_var = "সমতন"
     data = {
         "today": datetime.date.today(),
         "amount": 39.99,
         "customer_name": "Cooper Mann",
         "invoice_number": 1233434,
+        "name": test_var,
     }
     return renderer.render_to_pdf("core/pdf_template.html", data)
 

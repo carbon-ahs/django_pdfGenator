@@ -1,11 +1,17 @@
+{% load static %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
         <title>{% if pdf_title %}{{ pdf_title }}{% else %}PDF{% endif %}</title>
         <style type="text/css">
+            @font-face {
+                font-family: banglaFontFamily;
+                src: url({% static 'assets\fonts\NotoSansBengali.ttf' %}); 
+              }
             body {
                 font-weight: 200;
                 font-size: 14px;
+                background-image: url("https://placehold.co/600x400/EEE/31343C");
             }
             .header {
                 font-size: 20px;
@@ -34,6 +40,16 @@
                 color: #333; /* old IE */
                 background-color: #fff; /* Modern Browsers */
             }
+            .yoo {
+                
+                font-size: 22px;
+                font-weight: 100;
+                /* text-align: right;*/
+                padding: 10px 20px 0px 20px;  
+            }
+            .bangla-text{
+                font-family:banglaFontFamily;
+            }
         </style>
     </head>
     <body>
@@ -47,6 +63,8 @@
             Amount: {{ amount }} <br/>
             Date: {{ date }}
             <hr class='hrItem' />
+            <h1>Hello!!!</h1>
+            <h1 class="yoo">Hello!!!<p class="bangla-text">{{name}}</p>!!</h1>
         </div>
     </div>
     </body>
