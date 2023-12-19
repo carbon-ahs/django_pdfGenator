@@ -2,11 +2,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
+        <meta charset="utf-8">
         <title>{% if pdf_title %}{{ pdf_title }}{% else %}PDF{% endif %}</title>
         <style type="text/css">
             @font-face {
                 font-family: banglaFontFamily;
-                src: url("/static/assets/fonts/NotoSansBengali.ttf"); 
+                src: url("http://127.0.0.1:8000/static/assets/fonts/kalpurush.ttf"); 
               }
             body {
                 font-weight: 200;
@@ -65,7 +66,11 @@
             <hr class='hrItem' />
             <h1>Hello!!!</h1>
             <h1 class="yoo">Hello!!!<p class="bangla-text">{{name}}</p>!!</h1>
-            <p class="bangla-text">static font path url=url({% static 'assets\fonts\NotoSansBengali.ttf' %})</p>
+            <img src="{% static '/assets/img/dummy_image.jpg' %}">
+            <p class="bangla-text">static file path -- {% static '/assets/img/dummy_image.jpg' %}</p>
+            <p class="bangla-text">static file path -- {% static '/assets/fonts/NotoSansBengali.ttf' %}</p>
+
+            <img src="https://placehold.co/600x400/EEE/31343C">
             {% comment %} <p class="bangla-text">static font path url={{}}</p> {% endcomment %}
         </div>
     </div>

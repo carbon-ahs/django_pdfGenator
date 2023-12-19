@@ -9,5 +9,5 @@ from core import views
 
 urlpatterns = [
     path("", views.pdf_view, name="home"),
-    path("home/", views.home, name="home"),
+    path("home/", views.home, name="home1"),
 ]
